@@ -1,0 +1,23 @@
+{
+    "1": {
+        "title": "Click either button to explore",
+        "description": "This website is a collection of various scenes which utilize the javascript libraries p5.js and React. There is no real order or correlation between scenes and the goal is to showcase my progress in web-development and for me to explore various related topics and show off my findings."
+    },
+    "2": {
+        "title": "Globs",
+        "description": "Click or drag on the screen to interact."
+    },
+    "3": {
+        "title": "Backslash Maze",
+        "description": "Click to regenerate.  Probability of a forward slash and the size of slashes is displayed in the top left. A small section width can take a little while."
+    },
+    "4": {
+        "title": "Eyes",
+        "description": "They're always watching... They do need to blink every once in a while though."
+    },
+    "5": {
+        "title": "Eyes 2",
+        "description": "Click and drag on the scene to draw. You can give our eyes a face and a body, and after you could maybe even draw them a friend."
+    }
+
+}
