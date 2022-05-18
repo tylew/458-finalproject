@@ -166,6 +166,9 @@ function touchMoved() {
       case '2': 
         globMouseDragged();
         break;
+      case '5':
+        freeDraw();
+        break;
       default:
     
     }
