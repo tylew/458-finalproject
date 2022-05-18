@@ -29,7 +29,7 @@ export default function App() {
   }
 
   if (state === 1){
-    document.title = "TL Final";
+    document.title = "SCENES";
   } else {
     document.title = "SCENE " + state;
   }
