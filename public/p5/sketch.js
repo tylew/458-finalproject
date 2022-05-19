@@ -69,7 +69,7 @@ function draw() {
     // Determine what scene to render
     switch (state) {
       case '1': 
-      angleMode(RADIANS)
+        angleMode(RADIANS)
         welcome()
         break;
       case '2': 
@@ -227,7 +227,7 @@ function windowResized() {
 
     fill(0, 102, 153)
     textSize(14)
-    text("Tyler Lewis 2022",5,sceneHeight-30)
+    text("TRL 2022",5,sceneHeight-30)
     text("CPSC 458 Final Project",5,sceneHeight-15)
   }
 
