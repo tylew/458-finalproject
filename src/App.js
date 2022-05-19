@@ -3,6 +3,7 @@ import ScriptTag from 'react-script-tag';
 import { useStickyState } from "./hooks/useStickyState";
 import TextBox from './TextBox';
 import data from './descriptions.json';
+import {useEffect, useCallback} from 'react'
 
 
 export default function App() {
@@ -28,15 +29,38 @@ export default function App() {
     
   }
 
+  
+  const eventHandler = useCallback((event) => {
+    if(event.key === "ArrowRight"){
+      console.log('Used keyboard right arrow to switch scenes')
+      changeState(1);
+    }
+    else if(event.key === "ArrowLeft"){
+      console.log('Used keyboard left arrow to switch scenes')
+      changeState(-1);
+    }
+  }, [changeState])
+
+  useEffect( () => {
+    document.addEventListener('keydown', eventHandler);
+
+    return () => {
+      document.removeEventListener('keydown', eventHandler);
+    }
+
+  }, [eventHandler] )
+
+
   if (state === 1){
     document.title = "SCENES";
   } else {
-    document.title = "SCENE " + state;
+    document.title = "SCENE " + (state - 1);
   }
+  
   
 
   return (
-    <div className="App">
+    <div className="App" >
       
       <ScriptTag type="text/javascript" src="p5/sketch.js" />
       
@@ -64,4 +88,3 @@ export default function App() {
     </div>
   );
 }
-
