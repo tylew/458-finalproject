@@ -30,25 +30,25 @@ export default function App() {
   }
 
   
-  // const eventHandler = useCallback((event) => {
-  //   if(event.key === "ArrowRight"){
-  //     console.log('Used keyboard right arrow to switch scenes')
-  //     changeState(1);
-  //   }
-  //   else if(event.key === "ArrowLeft"){
-  //     console.log('Used keyboard left arrow to switch scenes')
-  //     changeState(-1);
-  //   }
-  // }, [changeState])
+  const eventHandler = useCallback((event) => {
+    if(event.key === "ArrowRight"){
+      console.log('Used keyboard right arrow to switch scenes')
+      changeState(1);
+    }
+    else if(event.key === "ArrowLeft"){
+      console.log('Used keyboard left arrow to switch scenes')
+      changeState(-1);
+    }
+  }, [changeState])
 
-  // useEffect( () => {
-  //   document.addEventListener('keydown', eventHandler);
+  useEffect( () => {
+    document.addEventListener('keydown', eventHandler);
 
-  //   return () => {
-  //     document.removeEventListener('keydown', eventHandler);
-  //   }
+    return () => {
+      document.removeEventListener('keydown', eventHandler);
+    }
 
-  // }, [eventHandler] )
+  }, [eventHandler] )
 
 
   if (state === 1){
